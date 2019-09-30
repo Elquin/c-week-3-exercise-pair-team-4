@@ -25,7 +25,6 @@ namespace BankTellerExerciseTests.Classes
         public void AddAccount(BankAccount newAccount)
         {
             accounts.Add(newAccount);
-            
         }
     }
 }

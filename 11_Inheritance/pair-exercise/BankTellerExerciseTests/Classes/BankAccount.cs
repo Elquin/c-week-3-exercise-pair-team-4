@@ -8,7 +8,7 @@ namespace BankTellerExerciseTests.Classes
     {
         public BankAccount()
         {
-            Balance = 0;
+            Balance = 0.00M;
         }
         public string AccountNumber { get; set; }
         public decimal Balance { get; private set; }
