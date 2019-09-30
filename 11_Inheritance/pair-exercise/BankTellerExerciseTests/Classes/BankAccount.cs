@@ -11,7 +11,7 @@ namespace BankTellerExerciseTests.Classes
             Balance = 0;
         }
         public string AccountNumber { get; set; }
-        public decimal Balance { get; protected set; }
+        public decimal Balance { get; private set; }
 
 
         public decimal Deposit(decimal amountToDeposit)

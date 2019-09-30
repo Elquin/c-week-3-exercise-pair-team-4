@@ -8,17 +8,18 @@ namespace BankTellerExerciseTests.Classes
     {
         public override decimal Withdraw(decimal amountToWithdraw)
         {
-            if (Balance < 150)
+            if (amountToWithdraw > Balance)
             {
-                return Balance = Balance - (amountToWithdraw + 2);
+                return Balance;
             }
-            else if (amountToWithdraw > Balance)
+            else if (Balance < 150)
             {
-                return Balance = Balance;
+                return Balance - (amountToWithdraw + 2);
             }
+
             else
             {
-                return Balance -= amountToWithdraw;
+                return Balance - amountToWithdraw;
             }
         }
     }
