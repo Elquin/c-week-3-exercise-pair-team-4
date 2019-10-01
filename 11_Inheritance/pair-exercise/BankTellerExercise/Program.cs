@@ -11,7 +11,7 @@ namespace BankTellerExercise
             BankAccount checkingAccount = new CheckingAccount();
             BankAccount savingsAccount = new SavingsAccount();
             decimal amountToDeposit = 140.00M;
-            decimal amountToWithdraw = 50.00M;
+            decimal amountToWithdraw = 150.00M;
 
             decimal newBalanceChecking =checkingAccount.Deposit(amountToDeposit);
             Console.WriteLine($"Jay Gatsby deposited ${amountToDeposit} into his checking account and his new balance is ${checkingAccount.Balance}");
@@ -24,8 +24,6 @@ namespace BankTellerExercise
 
             decimal newBalanceWithdrawSavings = savingsAccount.Withdraw(amountToWithdraw);
             Console.WriteLine($"Jay Gatsby withdrew ${amountToWithdraw} from his Savings account and his new balance is ${savingsAccount.Balance}");
-
-            Console.WriteLine($"");
 
             decimal amountToTransfer = 50.0M;
             checkingAccount.Transfer(savingsAccount, amountToTransfer);
