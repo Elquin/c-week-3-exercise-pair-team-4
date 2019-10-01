@@ -20,11 +20,28 @@ namespace BankTellerExerciseTests.Classes
                 return accounts.ToArray();
             }
         }
-
-
         public void AddAccount(BankAccount newAccount)
         {
             accounts.Add(newAccount);
+        }
+        public bool IsVIP
+        {
+            get
+            {
+                decimal sum = 0;
+                foreach (BankAccount account in Accounts)
+                {
+                    sum += account.Balance;
+                }
+                if (sum >= 25000)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
     }
 }
