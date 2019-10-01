@@ -14,12 +14,12 @@ namespace BankTellerExerciseTests.Classes
             }
             else if (Balance < 150)
             {
-                return Balance - (amountToWithdraw + 2);
+                return base.Withdraw(amountToWithdraw + 2);
             }
 
             else
             {
-                return Balance - amountToWithdraw;
+                return base.Withdraw(amountToWithdraw);
             }
         }
     }

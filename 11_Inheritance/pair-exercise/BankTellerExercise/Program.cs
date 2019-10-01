@@ -10,20 +10,20 @@ namespace BankTellerExercise
 
             BankAccount checkingAccount = new CheckingAccount();
             BankAccount savingsAccount = new SavingsAccount();
-            decimal amountToDeposit = 15000.00M;
+            decimal amountToDeposit = 140.00M;
             decimal amountToWithdraw = 50.00M;
 
             decimal newBalanceChecking =checkingAccount.Deposit(amountToDeposit);
-            Console.WriteLine($"Jay Gatsby deposited ${amountToDeposit} into his checking account and his new balance is ${newBalanceChecking}");
+            Console.WriteLine($"Jay Gatsby deposited ${amountToDeposit} into his checking account and his new balance is ${checkingAccount.Balance}");
 
             decimal newBalanceWithdrawChecking = checkingAccount.Withdraw(amountToWithdraw);
-            Console.WriteLine($"Jay Gatsby withdrew ${amountToWithdraw} from his checking account and his new balance is ${newBalanceWithdrawChecking}");
+            Console.WriteLine($"Jay Gatsby withdrew ${amountToWithdraw} from his checking account and his new balance is ${checkingAccount.Balance}");
 
             decimal newBalanceSavings = savingsAccount.Deposit(amountToDeposit);
-            Console.WriteLine($"Jay Gatsby deposited ${amountToDeposit} into his Savings account and his new balance is ${newBalanceSavings}");
+            Console.WriteLine($"Jay Gatsby deposited ${amountToDeposit} into his Savings account and his new balance is ${savingsAccount.Balance}");
 
             decimal newBalanceWithdrawSavings = savingsAccount.Withdraw(amountToWithdraw);
-            Console.WriteLine($"Jay Gatsby withdrew ${amountToWithdraw} from his Savings account and his new balance is ${newBalanceWithdrawSavings}");
+            Console.WriteLine($"Jay Gatsby withdrew ${amountToWithdraw} from his Savings account and his new balance is ${savingsAccount.Balance}");
 
             Console.WriteLine($"");
 

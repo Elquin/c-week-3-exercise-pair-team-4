@@ -10,7 +10,7 @@ namespace BankTellerExerciseTests.Classes
         {
             if (Balance - amountToWithdraw >= -100 && Balance - amountToWithdraw < 0)
             {
-                return Balance - (amountToWithdraw + 10);
+                return base.Withdraw(amountToWithdraw + 10);
             }
             else if (Balance - amountToWithdraw < -100)
             {
@@ -19,7 +19,7 @@ namespace BankTellerExerciseTests.Classes
 
             else
             {
-                return Balance - amountToWithdraw;
+                return base.Withdraw(amountToWithdraw);
             }
 
         }
