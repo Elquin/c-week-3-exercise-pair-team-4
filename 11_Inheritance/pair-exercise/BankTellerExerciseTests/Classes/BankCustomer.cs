@@ -12,7 +12,7 @@ namespace BankTellerExerciseTests.Classes
         public string Name { get; set; }
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
-        public List<BankAccount> accounts = new List<BankAccount>();
+        private List<BankAccount> accounts = new List<BankAccount>();
         public BankAccount[] Accounts
         {
             get
