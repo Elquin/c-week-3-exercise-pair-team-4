@@ -16,11 +16,19 @@ namespace EmployeePayroll
 
             Console.WriteLine("Employee \t Hours Worked \t Pay");
             Console.WriteLine("====================================================");
+            int totalHours = 0;
+            double totalPay = 0.00;
+            Random random = new Random();
             foreach (IWorker worker in workers)
             {
-                Console.WriteLine($"{worker.LastName}, {worker.FirstName} \t 45 \t {worker.CalculateWeeklyPay(45):C}");
+                int hoursWorked = random.Next(0, 120);
+                totalHours += hoursWorked;
+                totalPay += worker.CalculateWeeklyPay(hoursWorked);
+                Console.WriteLine($"{worker.LastName}, {worker.FirstName} \t{hoursWorked}  \t {worker.CalculateWeeklyPay(hoursWorked):C}");
             }
-
+            Console.WriteLine();
+            Console.WriteLine($"Total Hours: {totalHours}");
+            Console.WriteLine($"Total Pay: {totalPay:C}");
             Console.ReadLine();
         }
     }
